@@ -61,13 +61,13 @@ Error generating stack: `+o.message+`
     position: absolute;
     animation: ${_0} 5s infinite;
 `,Je=Y(zo)`
-    background-image: url("/src/assets/images/bulbasaur.png");
+    background-image: url("quest-react-avancado/src/assets/images/bulbasaur.png");
 `,qe=Y(zo)`
-    background-image: url("/src/assets/images/charmander.png");
+    background-image: url("quest-react-avancado/src/assets/images/charmander.png");
 `,be=Y(zo)`
-    background-image: url("/src/assets/images/squirtle.png");
+    background-image: url("quest-react-avancado/src/assets/images/squirtle.png");
 `,et=Y(zo)`
-    background-image: url("/src/assets/images/pikachu.png");
+    background-image: url("quest-react-avancado/src/assets/images/pikachu.png");
 `,P0=()=>S.jsx(N0,{children:S.jsx(C0,{})}),N0=Y.div`
     background: #fff;
     // background: #222;
@@ -239,7 +239,7 @@ p {
     p {
         margin-bottom: 5px;
     }
-`,Gv=()=>S.jsx(Av,{}),Yv=()=>S.jsxs(Xv,{children:[S.jsx(Zv,{src:"/src/assets/images/logo.svg",alt:"Pokémon Logo"}),S.jsx(_v,{children:S.jsxs(wv,{children:[S.jsx(mu,{exact:!0,path:"/",element:S.jsx(Uv,{})}),S.jsx(mu,{exact:!0,path:"/post/:id",element:S.jsx(Gv,{})})]})})]}),Xv=Y.div`
+`,Gv=()=>S.jsx(Av,{}),Yv=()=>S.jsxs(Xv,{children:[S.jsx(Zv,{src:"./quest-react-avancado/src/assets/images/logo.svg",alt:"Pokémon Logo"}),S.jsx(_v,{children:S.jsxs(wv,{children:[S.jsx(mu,{exact:!0,path:"/",element:S.jsx(Uv,{})}),S.jsx(mu,{exact:!0,path:"/post/:id",element:S.jsx(Gv,{})})]})})]}),Xv=Y.div`
     display: flex;
     align-items: center;
     max-width: 75%;
