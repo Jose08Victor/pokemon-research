@@ -73,15 +73,15 @@ const Span = styled.span`
     animation: ${floating} 5s infinite;
 `
 const Bulbasaur = styled(Span)`
-    background-image: url("/src/assets/images/bulbasaur.png");
+    background-image: url("quest-react-avancado/src/assets/images/bulbasaur.png");
 `
 const Charmander = styled(Span)`
-    background-image: url("/src/assets/images/charmander.png");
+    background-image: url("quest-react-avancado/src/assets/images/charmander.png");
 `
 const Squirtle= styled(Span)`
-    background-image: url("/src/assets/images/squirtle.png");
+    background-image: url("quest-react-avancado/src/assets/images/squirtle.png");
 `
 const Pikachu = styled(Span)`
-    background-image: url("/src/assets/images/pikachu.png");
+    background-image: url("quest-react-avancado/src/assets/images/pikachu.png");
 `
 export { BackShapes }

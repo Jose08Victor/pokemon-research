@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const AppRoutes = () => (
   <Div>
-    <Logo src="/src/assets/images/logo.svg" alt="Pokémon Logo" />
+    <Logo src="./quest-react-avancado/src/assets/images/logo.svg" alt="Pokémon Logo" />
 
     <BrowserRouter>
       <Routes>
