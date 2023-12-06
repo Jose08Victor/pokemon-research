@@ -1,4 +1,8 @@
 import styled, { keyframes } from "styled-components"
+import bulbasaur from "../../assets/images/bulbasaur.png"
+import charmander from "../../assets/images/charmander.png"
+import squirtle from "../../assets/images/squirtle.png"
+import pikachu from "../../assets/images/pikachu.png"
 
 const BackShapes = () => {
     return (
@@ -73,15 +77,15 @@ const Span = styled.span`
     animation: ${floating} 5s infinite;
 `
 const Bulbasaur = styled(Span)`
-    background-image: url("quest-react-avancado/src/assets/images/bulbasaur.png");
+    background-image: url(${bulbasaur});
 `
 const Charmander = styled(Span)`
-    background-image: url("quest-react-avancado/src/assets/images/charmander.png");
+    background-image: url(${charmander});
 `
 const Squirtle= styled(Span)`
-    background-image: url("quest-react-avancado/src/assets/images/squirtle.png");
+    background-image: url(${squirtle});
 `
 const Pikachu = styled(Span)`
-    background-image: url("quest-react-avancado/src/assets/images/pikachu.png");
+    background-image: url(${pikachu});
 `
 export { BackShapes }

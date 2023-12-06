@@ -2,16 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './home';
 import { Descripition } from './post';
+import logo from "../assets/images/logo.svg"
 import styled from 'styled-components';
 
 const AppRoutes = () => (
   <Div>
-    <Logo src="./quest-react-avancado/src/assets/images/logo.svg" alt="Pokémon Logo" />
+    <Logo src={logo} alt="Pokémon Logo" />
 
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/post/:id' element={<Descripition />} />
+        <Route exact path='/quest-react-avancado' element={<Home />} />
+        <Route exact path='/:id' element={<Descripition />} />
       </Routes>
     </BrowserRouter>
   </Div>

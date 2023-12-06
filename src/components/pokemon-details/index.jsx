@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { getPokemon, getType, getMoves, getAbilities } from '../../services/pokemonResource';
 import { ButtonDefault } from '../button';
+import pokeball from '../../../public/pokeball.png'
 import styled from 'styled-components';
 
 const PokemonDetails = () => {
@@ -47,7 +48,6 @@ const PokemonDetails = () => {
                 <p>{post.moves}.</p>
 
                 <H3>Ability(ies) :</H3>
-
                 {
                     post.abilities.map((e, index) => {
                         return (
@@ -60,7 +60,7 @@ const PokemonDetails = () => {
                     })
                 }
             </Details>
-            <Link to={'/'}><ButtonDefault label='Return' /></Link>
+            <Link to={'/quest-react-avancado'}><ButtonDefault label='Return' /></Link>
         </Div>
     )
 }
@@ -92,7 +92,7 @@ const Pokemon = styled.div`
 `
 
 const Img = styled.img`
-    width: 200px;
+    width: 170px;
 `
 
 const Details = styled.div`
@@ -114,7 +114,7 @@ const H3 = styled.h3`
     margin: 25px 0 10px;
     font-size: 26px;
     font-weight: 900;
-    background: url(/src/assets/images/pokeball.png) no-repeat left;
+    background: url(${pokeball}) no-repeat left;
     background-size: 27px;
     padding-left: 26px;
 `
@@ -127,5 +127,4 @@ const Ability = styled.div`
         margin-bottom: 5px;
     }
 `
-
 export { PokemonDetails }

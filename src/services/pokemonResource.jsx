@@ -66,7 +66,7 @@ export async function getAbilities(abilities) {
         const gfr = await response.json();
         rapaz.push({
             ability: gfr.name,
-            description: gfr.effect_entries[1].effect
+            description: gfr.effect_entries[1].short_effect
         })
     }
 
@@ -77,7 +77,6 @@ export async function getAbilities(abilities) {
                 discription: e.description
             })
         }
-
     })
 
     return (hmm);
