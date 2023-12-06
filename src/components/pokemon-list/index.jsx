@@ -13,7 +13,6 @@ const PokemonsList = () => {
             const data = await getPokemons()
             setLists({ pokemons: data })
         }
-
         fetchData()
     }, [])
 
@@ -21,29 +20,19 @@ const PokemonsList = () => {
         <>
             <Ul>
                 {
-                    
-                    
                     lists.pokemons.map((pokemon, index) => {
-                        if(lists.type != undefined && pokemon.type.includes(lists.type)){
-                            console.log(pokemon.type);
-                            return (<Li key={index}>
-                                <Link to={`/post/${pokemon.id}`}>
+                        if (lists.type !== undefined && pokemon.type.includes(lists.type)) return pokemonCard()
+
+                        if ((lists.type === undefined || lists.type === "") && index < count) return pokemonCard()
+
+                        function pokemonCard() {
+                            return <Li key={index}>
+                                <Link to={`/${pokemon.id}`}>
                                     <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt={`${pokemon.name} gif.`} />
 
                                     <p>{pokemon.name}</p>
-                                    <p>{pokemon.type}</p>
                                 </Link>
-                            </Li>)
-                        }
-                        if (index < count && lists.type == undefined) {
-                            return (<Li key={index}>
-                                <Link to={`/post/${pokemon.id}`}>
-                                    <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt={`${pokemon.name} gif.`} />
-
-                                    <p>{pokemon.name}</p>
-                                    <p>{pokemon.type}</p>
-                                </Link>
-                            </Li>)
+                            </Li>;
                         }
                     })
                 }
@@ -52,31 +41,35 @@ const PokemonsList = () => {
             <Div>
                 <ButtonDefault label='Load more' onclick={() => { setCount((c) => c + 10) }} />
 
-                <form onSubmit={(e) => {
-                    e.preventDefault();
+                <p>or</p>
 
-                    setLists({...lists,  type: typeOption.value});
-                }}>
+                <form onSubmit={(e) => {
+                                        e.preventDefault();
+
+                                        setLists({ ...lists, type: typeOption.value });
+                               }}>
+                                
+                    <Label htmlFor="typeOption">Select pokemon's types:</Label>
                     <Select id='typeOption'>
-                        <option value="undefined">select pokemon's types</option>
-                        <option value="normal">Normal</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="flying">Flying</option>
-                        <option value="poison">Poison</option>
-                        <option value="ground">Ground</option>
-                        <option value="rock">Rock</option>
-                        <option value="bug">Bug</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="fire">Fire</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
-                        <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
-                        <option value="ice">Ice</option>
-                        <option value="dragon">Dragon</option>
+                        <Option value="">All types</Option>
+                        <Option value="normal">Normal</Option>
+                        <Option value="fighting">Fighting</Option>
+                        <Option value="flying">Flying</Option>
+                        <Option value="poison">Poison</Option>
+                        <Option value="ground">Ground</Option>
+                        <Option value="rock">Rock</Option>
+                        <Option value="bug">Bug</Option>
+                        <Option value="ghost">Ghost</Option>
+                        <Option value="fire">Fire</Option>
+                        <Option value="water">Water</Option>
+                        <Option value="grass">Grass</Option>
+                        <Option value="electric">Electric</Option>
+                        <Option value="psychic">Psychic</Option>
+                        <Option value="ice">Ice</Option>
+                        <Option value="dragon">Dragon</Option>
                     </Select>
-                    
-                    <button type="submit">submit</button>
+
+                    <Button type="submit">submit</Button>
                 </form>
             </Div>
         </>
@@ -116,23 +109,34 @@ const Img = styled.img`
 `
 
 const Div = styled.div`
-width: 100%;
-height: 50px;
-display: flex;
-align-itens: center;
-justify-content: space-between;
-margin: 50px 0;
-font-size: 28px;
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+
+p {
+    font-size: 20px;
+    margin-top: 20px;  
+}
+`
+
+const Label = styled.label`
+    display:block;
+    font-size: 20px;
+    margin: 20px auto 5px;
+    font-weight: 900;
+    width: 252px;
 `
 
 const Select = styled.select`
-width: 48%;
-border-radius: 10px;
+    width: 260px;
+    height: 50px;
+    border-radius: 10px;
     cursor: pointer;
     background-color: #222;
     color: #fff;
     font-size: 16px;
-    padding-left: 25px;
+    text-align: center;
+    margin: 0 10px;
 
     &:hover {
         background-color: transparent;
@@ -141,10 +145,31 @@ border-radius: 10px;
         /* color: #fff;
         border: #fff solid 2px; */
     }
+`
 
-    option{
-        color: #fff;
-       
-   }
+const Option = styled.option`
+    // color: #222;  
+        background-color: #fff;
+        //  color: #fff;  
+        // background-color: #222;
+`
+
+const Button = styled.button`
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+
+    &:hover {
+        background-color: transparent;
+        color: #222;
+        border: #222 solid 2px;
+        /* color: #fff;
+        border: #fff solid 2px; */
+    }
 `
 export { PokemonsList }
