@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { getPokemon, getType, getMoves, getAbilities } from '../../services/pokemonResource';
+import { Link, useParams, useLocation } from 'react-router-dom';
+import { getType, getMoves, getAbilities } from '../../services/pokemonResource';
 import { ButtonDefault } from '../button';
-import pokeball from '../../../public/pokeball.png'
+import pokeball from '/pokeball.png'
 import styled from 'styled-components';
 
 const PokemonDetails = () => {
@@ -14,12 +13,12 @@ const PokemonDetails = () => {
         abilities: []
     })
 
+    const { state } = useLocation()
     const { id } = useParams()
 
     useEffect(() => {
         async function fetchData() {
-            const [name, types, moves, abilities] = await getPokemon(id)
-            const type = await getType(types)
+            const { name, type, moves, abilities } = state
             const move = await getMoves(moves)
             const ability = await getAbilities(abilities)
 
@@ -60,7 +59,9 @@ const PokemonDetails = () => {
                     })
                 }
             </Details>
-            <Link to={'/quest-react-avancado'}><ButtonDefault label='Return' /></Link>
+            <Link to={'/quest-react-avancado'}>
+                  <ButtonDefault label='Return' />
+            </Link>
         </Div>
     )
 }

@@ -3,18 +3,12 @@ export async function getPokemons() {
     for (let i = 1; i <= 151; i++) {
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         const response = await fetch(url);
-        const { id, name, types } = await response.json();
+        const { id, name, types, moves, abilities } = await response.json();
         const type = await getType(types)
-        capturedPokemons.push({ id, name, type });
+
+        capturedPokemons.push({ id, name, type, moves, abilities });
     }
     return capturedPokemons;
-}
-
-export async function getPokemon(id) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const response = await fetch(url);
-    const { name, types, moves, abilities } = await response.json();
-    return [name, types, moves, abilities];
 }
 
 export async function getType(types) {

@@ -27,7 +27,7 @@ const PokemonsList = () => {
 
                         function pokemonCard() {
                             return <Li key={index}>
-                                <Link to={`/${pokemon.id}`}>
+                                <Link to={`/${pokemon.id}`} state={pokemon}>
                                     <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt={`${pokemon.name} gif.`} />
 
                                     <p>{pokemon.name}</p>
