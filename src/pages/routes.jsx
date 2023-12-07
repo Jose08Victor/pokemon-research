@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './home';
 import { Descripition } from './post';
-import logo from "../assets/images/logo.svg"
+import logo from "../assets/images/black-logo.svg"
 import styled from 'styled-components';
 
 const AppRoutes = () => (
