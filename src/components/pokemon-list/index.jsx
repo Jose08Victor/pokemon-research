@@ -108,11 +108,25 @@ const Li = styled.li`
  a {
     text-align: center;
  }
+
+ @media(max-width: 600px){
+    width: 100px;
+    height: 100px;
+
+    p {
+        font-size: 14px;
+    }
+ }
 `
 
 const Img = styled.img`
     min-width: 50px;
     max-height: 80px;
+
+    @media(max-width: 600px){
+        min-width: 40px;
+        max-height: 70px;
+     }
 `
 
 const Div = styled.div`
@@ -123,7 +137,7 @@ const Div = styled.div`
 p {
     font-size: 20px;
     margin-top: 20px;
-    cursor: default;  
+    cursor: default;   
 }
 `
 
@@ -144,7 +158,7 @@ const Select = styled.select`
     color: ${props => props.theme.backgroundColor};
     font-size: 16px;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 10px 10px;
     outline : 0;
 
     &:hover {

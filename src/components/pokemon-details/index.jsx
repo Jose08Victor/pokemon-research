@@ -71,14 +71,29 @@ const Div = styled.div`
     align-items: center;
     flex-direction: column;
 
-p {
-    padding: 0 20px;
-    font-size: 18px;
-}
+    p {
+        padding: 0 20px;
+        font-size: 18px;
+    }
 
     button {
         width: 500px;
         margin: 50px 0;
+    }
+
+    @media (max-width: 600px){
+        button{
+            width: 300px;
+            margin: 40px 0;
+        }
+
+        h1{
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14.5px;
+        }
     }
 `
 
@@ -90,25 +105,41 @@ const Pokemon = styled.div`
     background-color: hsla(0, 1%, 57%, 0.4);
     padding: 20px;
     border-radius: 10px;
+
+    @media (max-width: 600px){
+        gap: 15px;
+        padding: 15px;
+    }
 `
 
 const Img = styled.img`
     width: 170px;
+
+    @media (max-width: 600px){
+        width: 120px;
+    }
 `
 
 const Details = styled.div`
     max-width: 60%;
+
+    @media (max-width: 768px){
+        max-width: 100%;
+    }
 `
 
 const Types = styled.p`
-    font-size: 20px;
-    text-align:center;
+    text-align: center;
     margin-top: 20px;
 `
 
 const Span = styled.span`
     font-weight: 900;
     font-size: 21px;
+
+    @media (max-width: 600px){
+        font-size: 17px;
+    }
 `
 
 const H3 = styled.h3`
@@ -118,11 +149,14 @@ const H3 = styled.h3`
     background: url(${pokeball}) no-repeat left;
     background-size: 27px;
     padding-left: 26px;
+
+    @media (max-width: 600px){
+        font-size: 20px;
+    }
 `
 
 const Ability = styled.div`
-    margin-bottom: 12px;
-    z-index: 1;
+    margin-bottom: 14px;
 
     p {
         margin-bottom: 5px;

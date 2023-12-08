@@ -27,4 +27,8 @@ const Button = styled.button`
     border: solid 2px;
     border-color: ${props => props.theme.color};
 }
+
+@media (max-width: 600px){
+    width: 100%;
+}
 `

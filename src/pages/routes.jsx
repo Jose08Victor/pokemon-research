@@ -31,11 +31,21 @@ const Div = styled.div`
     margin: 0 auto;
     flex-direction: column;
     position: relative;
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
 `
 const Logo = styled.img`
     max-width: 60%;
     max-height: 100%;
     margin-bottom: 50px;
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      margin-top: 30px;
+    }
 `
 
 export { AppRoutes };

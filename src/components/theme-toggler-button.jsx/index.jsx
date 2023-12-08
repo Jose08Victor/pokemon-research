@@ -50,6 +50,20 @@ const Label = styled.label`
     left: 3px;
     transition: 0.5s;
     }
+
+    @media (max-width: 768px) {
+        top: 20px;
+    left: 20px;
+        width: 45px;
+        height: 20px;
+
+        &:after{
+            height: 12.5px;
+            width: 12.5px;
+            top: .7px;
+            left: 1.4px;
+        }
+    }
 ` 
 
 const Input = styled.input`
@@ -66,6 +80,12 @@ const Input = styled.input`
     background-size: cover;
     background-color: #fff;
     }
+
+    @media (max-width: 768px) {
+        &:checked ~ label:after{
+            left: 24.5px; 
+        }
+    }
 `
 
 const P = styled.p`
@@ -75,4 +95,10 @@ const P = styled.p`
     font-weight: 900;
     font-size: 12.5px;
     cursor: default;
+
+    @media (max-width: 768px) {
+        top: 45px;
+        left: 17px;
+        font-size: 9px;
+    }
 `
