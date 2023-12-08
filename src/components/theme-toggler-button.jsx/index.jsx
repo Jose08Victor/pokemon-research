@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import { ThemeContext, themes } from "../../contexts/theme-context"
 import styled from "styled-components"
-import blackPokeball from "../../../src/assets/black-pokeball.svg"
-import whitePokeball from "../../../src/assets/white-pokeball.svg"
+import blackPokeball from "../../assets/black-pokeball.svg"
+import whitePokeball from "../../assets/white-pokeball.svg"
 
 export const ThemeTogglerButton = () => {
 
