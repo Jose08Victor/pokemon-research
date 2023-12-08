@@ -18,14 +18,14 @@ const Button = styled.button`
     font-weight: 900;
     cursor: pointer;
     font-size: 16px;
-    background-color: ${props => props.theme.color};
-    color: ${props => props.theme.backgroundColor}; 
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary}; 
     
 &:hover {
     background-color: transparent;
-    color: ${props => props.theme.color};
+    color: ${props => props.theme.primary};
     border: solid 2px;
-    border-color: ${props => props.theme.color};
+    border-color: ${props => props.theme.primary};
 }
 
 @media (max-width: 600px){

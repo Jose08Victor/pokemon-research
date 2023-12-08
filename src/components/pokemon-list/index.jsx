@@ -154,8 +154,8 @@ const Select = styled.select`
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: ${props => props.theme.color};
-    color: ${props => props.theme.backgroundColor};
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
     font-size: 16px;
     text-align: center;
     margin: 0 10px 10px;
@@ -163,13 +163,13 @@ const Select = styled.select`
 
     &:hover {
         background-color: transparent;
-        color: ${props => props.theme.color};
+        color: ${props => props.theme.primary};
         border: solid 2px;
-        border-color:${props => props.theme.color};
+        border-color:${props => props.theme.primary};
     }
 
     option{
-        background-color: ${props => props.theme.backgroundColor};
+        background-color: ${props => props.theme.secondary};
     }
 `
 
@@ -178,16 +178,16 @@ const Button = styled.button`
     height: 35px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: ${props => props.theme.color};
-    color: ${props => props.theme.backgroundColor};
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
     font-size: 16px;
     text-align: center;
 
     &:hover {
         background-color: transparent;
-        color: ${props => props.theme.color};
+        color: ${props => props.theme.primary};
         border: solid 2px;
-        border-color:${props => props.theme.color};
+        border-color:${props => props.theme.primary};
     }
 `
 export { PokemonsList }

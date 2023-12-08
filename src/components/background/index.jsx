@@ -15,7 +15,7 @@ const Background = () => {
 }
 
 const Div = styled.div`
-    background: ${props => props.theme.backgroundColor};
+    background: ${props => props.theme.secondary};
     position: fixed;
     width: 100vw;
     height: 100vh;

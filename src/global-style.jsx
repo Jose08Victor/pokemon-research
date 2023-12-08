@@ -14,7 +14,7 @@ const Reset = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     font-family: 'Tourney', sans-serif;
-    color: ${props => props.theme.color};
+    color: ${props => props.theme.primary};
     font-weight: 700;
 }
 
