@@ -75,6 +75,11 @@ const Span = styled.span`
     opacity: .7;
     position: absolute;
     animation: ${floating} 5s infinite;
+
+    @media (max-width: 600px){
+        width: 20px;
+        height: 20px;
+    }
 `
 const Bulbasaur = styled(Span)`
     background-image: url(${bulbasaur});
