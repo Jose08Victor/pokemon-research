@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import { ThemeContext, themes } from "../../contexts/theme-context"
 import styled from "styled-components"
-import blackPokeball from "../../assets/black-pokeball.svg"
-import whitePokeball from "../../assets/white-pokeball.svg"
+import blackPokeball from "../../../src/assets/black-pokeball.svg"
+import whitePokeball from "../../../src/assets/white-pokeball.svg"
 
 export const ThemeTogglerButton = () => {
 
@@ -10,9 +10,9 @@ export const ThemeTogglerButton = () => {
 
     return (
         <>
-            <Input type="checkbox" id="dark-mode"/>
+            <Input type="checkbox" id="theme-mode"/>
 
-            <Label htmlFor="dark-mode" onClick={() => setTheme(theme === themes.light ? themes.dark : themes.light)}></Label>
+            <Label htmlFor="theme-mode" onClick={() => setTheme(theme === themes.light ? themes.dark : themes.light)}></Label>
 
             <P>{theme === themes.light ? 'Mode: Light' : 'Mode: Dark'}</P>
         </>
@@ -53,7 +53,7 @@ const Label = styled.label`
 
     @media (max-width: 768px) {
         top: 20px;
-    left: 20px;
+        left: 20px;
         width: 45px;
         height: 20px;
 
