@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
-import { getType, getMoves, getAbilities } from '../../services/pokemonResource';
+import { getMoves, getAbilities } from '../../services/pokemonResource';
 import { ButtonDefault } from '../button';
 import pokeball from '/pokeball.png'
 import styled from 'styled-components';

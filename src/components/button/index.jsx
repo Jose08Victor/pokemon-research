@@ -1,9 +1,13 @@
-
+import React, { useContext } from "react"
 import styled from "styled-components"
+import { ThemeContext } from "../../contexts/theme-context"
 
  export const ButtonDefault = ({label, onclick}) => {
+
+const { theme } = useContext(ThemeContext)
+
     return (
-        <Button onClick={onclick} >{label}</Button>
+        <Button theme={theme} onClick={onclick} >{label}</Button>
     )
 }
 
@@ -14,15 +18,13 @@ const Button = styled.button`
     font-weight: 900;
     cursor: pointer;
     font-size: 16px;
-    background-color: #222;
-    color: #fff;
-    /* background-color: #fff;
-    color: #222; */
+    background-color: ${props => props.theme.color};
+    color: ${props => props.theme.backgroundColor}; 
+    
 &:hover {
     background-color: transparent;
-    color: #222;
-    border: #222 solid 2px;
-    /* color: #fff;
-    border: #fff solid 2px; */
+    color: ${props => props.theme.color};
+    border: solid 2px;
+    border-color: ${props => props.theme.color};
 }
 `

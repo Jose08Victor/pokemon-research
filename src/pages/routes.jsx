@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './home';
 import { Descripition } from './post';
-import logo from "../assets/images/black-logo.svg"
+import whiteLogo from '../assets/white-logo.svg';
+import blackLogo from '../assets/black-logo.svg';
 import styled from 'styled-components';
+import { ThemeContext, themes } from '../contexts/theme-context';
 
-const AppRoutes = () => (
+const AppRoutes = () => {
+  const {theme} = useContext(ThemeContext);
+
+  return (
   <Div>
-    <Logo src={logo} alt="Pokémon Logo" />
+    <Logo src={theme === themes.light ? blackLogo : whiteLogo} alt="Pokémon Logo" />
 
     <BrowserRouter>
       <Routes>
@@ -16,7 +21,7 @@ const AppRoutes = () => (
       </Routes>
     </BrowserRouter>
   </Div>
-);
+)};
 
 const Div = styled.div`
     display: flex;
@@ -30,7 +35,7 @@ const Div = styled.div`
 const Logo = styled.img`
     max-width: 60%;
     max-height: 100%;
-    margin: 50px 0;
+    margin-bottom: 50px;
 `
 
 export { AppRoutes };

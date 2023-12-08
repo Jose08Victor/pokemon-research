@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { getPokemons } from '../../services/pokemonResource';
 import { Link } from 'react-router-dom';
 import { ButtonDefault } from '../button';
+import React, { useContext } from "react"
+import { ThemeContext } from '../../contexts/theme-context';
+
 
 const PokemonsList = () => {
     const [lists, setLists] = useState({ pokemons: [] })
@@ -15,6 +18,8 @@ const PokemonsList = () => {
         }
         fetchData()
     }, [])
+
+    const {theme} = useContext(ThemeContext)
 
     return (
         <>
@@ -50,26 +55,28 @@ const PokemonsList = () => {
                                }}>
                                 
                     <Label htmlFor="typeOption">Select pokemon's types:</Label>
-                    <Select id='typeOption'>
-                        <Option value="">All types</Option>
-                        <Option value="normal">Normal</Option>
-                        <Option value="fighting">Fighting</Option>
-                        <Option value="flying">Flying</Option>
-                        <Option value="poison">Poison</Option>
-                        <Option value="ground">Ground</Option>
-                        <Option value="rock">Rock</Option>
-                        <Option value="bug">Bug</Option>
-                        <Option value="ghost">Ghost</Option>
-                        <Option value="fire">Fire</Option>
-                        <Option value="water">Water</Option>
-                        <Option value="grass">Grass</Option>
-                        <Option value="electric">Electric</Option>
-                        <Option value="psychic">Psychic</Option>
-                        <Option value="ice">Ice</Option>
-                        <Option value="dragon">Dragon</Option>
+                    <Select id='typeOption' theme={theme}>
+
+                        <option value="">All types</option>
+                        <option value="normal">Normal</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="flying">Flying</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="rock">Rock</option>
+                        <option value="bug">Bug</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="grass">Grass</option>
+                        <option value="electric">Electric</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="ice">Ice</option>
+                        <option value="dragon">Dragon</option>
+
                     </Select>
 
-                    <Button type="submit">submit</Button>
+                    <Button theme={theme} type="submit">submit</Button>
                 </form>
             </Div>
         </>
@@ -115,7 +122,8 @@ const Div = styled.div`
 
 p {
     font-size: 20px;
-    margin-top: 20px;  
+    margin-top: 20px;
+    cursor: default;  
 }
 `
 
@@ -132,26 +140,23 @@ const Select = styled.select`
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #222;
-    color: #fff;
+    background-color: ${props => props.theme.color};
+    color: ${props => props.theme.backgroundColor};
     font-size: 16px;
     text-align: center;
     margin: 0 10px;
+    outline : 0;
 
     &:hover {
         background-color: transparent;
-        color: #222;
-        border: #222 solid 2px;
-        /* color: #fff;
-        border: #fff solid 2px; */
+        color: ${props => props.theme.color};
+        border: solid 2px;
+        border-color:${props => props.theme.color};
     }
-`
 
-const Option = styled.option`
-    // color: #222;  
-        background-color: #fff;
-        //  color: #fff;  
-        // background-color: #222;
+    option{
+        background-color: ${props => props.theme.backgroundColor};
+    }
 `
 
 const Button = styled.button`
@@ -159,17 +164,16 @@ const Button = styled.button`
     height: 35px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #222;
-    color: #fff;
+    background-color: ${props => props.theme.color};
+    color: ${props => props.theme.backgroundColor};
     font-size: 16px;
     text-align: center;
 
     &:hover {
         background-color: transparent;
-        color: #222;
-        border: #222 solid 2px;
-        /* color: #fff;
-        border: #fff solid 2px; */
+        color: ${props => props.theme.color};
+        border: solid 2px;
+        border-color:${props => props.theme.color};
     }
 `
 export { PokemonsList }

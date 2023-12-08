@@ -1,17 +1,21 @@
+import React, { useContext } from "react"
 import { BackShapes } from "../back-shapes"
 import styled from "styled-components"
+import { ThemeContext } from "../../contexts/theme-context"
 
 const Background = () => {
+
+    const {theme} = useContext(ThemeContext)
+    
     return (
-        <Div>
+        <Div theme={theme}>
             <BackShapes />
         </Div>
     )
 }
 
 const Div = styled.div`
-    background: #fff;
-    // background: #222;
+    background: ${props => props.theme.backgroundColor};
     position: fixed;
     width: 100vw;
     height: 100vh;
