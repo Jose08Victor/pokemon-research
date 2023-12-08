@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components"
-import bulbasaur from "../../assets/images/bulbasaur.png"
-import charmander from "../../assets/images/charmander.png"
-import squirtle from "../../assets/images/squirtle.png"
-import pikachu from "../../assets/images/pikachu.png"
+import bulbasaur from "../../assets/bulbasaur.png"
+import charmander from "../../assets/charmander.png"
+import squirtle from "../../assets/squirtle.png"
+import pikachu from "../../assets/pikachu.png"
 
 const BackShapes = () => {
     return (
@@ -72,7 +72,7 @@ const Span = styled.span`
     width: 30px;
     height: 30px;
     background-size: cover;
-    opacity: .8;
+    opacity: .7;
     position: absolute;
     animation: ${floating} 5s infinite;
 `
