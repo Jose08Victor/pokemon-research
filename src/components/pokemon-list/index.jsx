@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components';
-import { getPokemons } from '../../services/pokemonResource';
+import { getFirstGenerationPokemons } from '../../services/pokemonResource';
 import { Link } from 'react-router-dom';
 import { ButtonDefault } from '../button';
 import React, { useContext } from "react"
 import { ThemeContext } from '../../contexts/theme-context';
+import { Loading } from '../loading';
 
 const PokemonsList = () => {
     const [list, setList] = useState({ pokemons: [] })
@@ -12,7 +13,7 @@ const PokemonsList = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await getPokemons()
+            const data = await getFirstGenerationPokemons()
             setList({ pokemons: data })
         }
         fetchData()
@@ -21,62 +22,71 @@ const PokemonsList = () => {
     const { theme } = useContext(ThemeContext)
     return (
         <>
-            <Ul>
-                {
-                    list.pokemons.map((pokemon, index) => {
-                        if (list.typeSelected !== undefined && pokemon.type.includes(list.typeSelected)) return pokemonCard()
+            { list.pokemons.length === 0 && <Loading/> }
 
-                        if ((list.typeSelected === undefined || list.typeSelected === "") && index < count) return pokemonCard()
+            { list.pokemons.length !== 0 &&
+                <>
+                    <Ul>
+                        {
+                            list.pokemons.map((pokemon, index) => {
+                                if (list.typeSelected !== undefined && pokemon.type.includes(list.typeSelected)) return pokemonCard()
 
-                        function pokemonCard() {
-                            return <Li key={index}>
-                                <Link to={`/${pokemon.id}`} state={pokemon}>
-                                    <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt={`${pokemon.name} gif.`} />
+                                if ((list.typeSelected === undefined || list.typeSelected === "") && index < count) return pokemonCard()
 
-                                    <p>{pokemon.name}</p>
-                                </Link>
-                            </Li>;
+                                function pokemonCard() {
+                                    return <Li key={index}>
+                                        <Link to={`/${pokemon.id}`} state={pokemon}>
+                                            <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemon.id}.gif`} alt={`${pokemon.name} gif.`} />
+
+                                            <p>{pokemon.name}</p>
+                                        </Link>
+                                    </Li>;
+                                }
+                            })
                         }
-                    })
-                }
-            </Ul>
+                    </Ul>
 
-            <Div>
-                <ButtonDefault label='Load more' onclick={() => { setCount((c) => c + 10) }} />
+                    <Div>
+                        {(list.typeSelected === undefined || list.typeSelected === "") &&
+                            <>
+                                <ButtonDefault label='Load more' onclick={() => { setCount((c) => c + 10) }} />
+                                <p>or</p>
+                            </>
+                        }
 
-                <p>or</p>
+                        <form onSubmit={(e) => {
+                            e.preventDefault();
 
-                <form onSubmit={(e) => {
-                    e.preventDefault();
+                            setList({ ...list, typeSelected: typeOption.value });
+                        }}>
 
-                    setList({ ...list, typeSelected: typeOption.value });
-                }}>
+                            <Label htmlFor="typeOption">Select pokemon's types:</Label>
+                            <Select id='typeOption' theme={theme}>
 
-                    <Label htmlFor="typeOption">Select pokemon's types:</Label>
-                    <Select id='typeOption' theme={theme}>
+                                <option value="">All types</option>
+                                <option value="normal">Normal</option>
+                                <option value="fighting">Fighting</option>
+                                <option value="flying">Flying</option>
+                                <option value="poison">Poison</option>
+                                <option value="ground">Ground</option>
+                                <option value="rock">Rock</option>
+                                <option value="bug">Bug</option>
+                                <option value="ghost">Ghost</option>
+                                <option value="fire">Fire</option>
+                                <option value="water">Water</option>
+                                <option value="grass">Grass</option>
+                                <option value="electric">Electric</option>
+                                <option value="psychic">Psychic</option>
+                                <option value="ice">Ice</option>
+                                <option value="dragon">Dragon</option>
 
-                        <option value="">All types</option>
-                        <option value="normal">Normal</option>
-                        <option value="fighting">Fighting</option>
-                        <option value="flying">Flying</option>
-                        <option value="poison">Poison</option>
-                        <option value="ground">Ground</option>
-                        <option value="rock">Rock</option>
-                        <option value="bug">Bug</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="fire">Fire</option>
-                        <option value="water">Water</option>
-                        <option value="grass">Grass</option>
-                        <option value="electric">Electric</option>
-                        <option value="psychic">Psychic</option>
-                        <option value="ice">Ice</option>
-                        <option value="dragon">Dragon</option>
+                            </Select>
 
-                    </Select>
-
-                    <Button theme={theme} type="submit">submit</Button>
-                </form>
-            </Div>
+                            <Button theme={theme} type="submit">submit</Button>
+                        </form>
+                    </Div>
+                </>
+            }
         </>
     )
 }

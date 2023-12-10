@@ -4,6 +4,7 @@ import { getMoves, getAbilities } from '../../services/pokemonResource';
 import { ButtonDefault } from '../button';
 import pokeball from '/pokeball.png'
 import styled from 'styled-components';
+import { Loading } from '../loading';
 
 const PokemonDetails = () => {
     const [post, setPost] = useState({
@@ -34,34 +35,41 @@ const PokemonDetails = () => {
 
     return (
         <Div>
-            <Pokemon>
-                <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`} alt={post.name} />
+            { post.name.length === 0 && <Loading/> }
 
-                <h1>{post.name}</h1>
-            </Pokemon>
+            { post.name.length !== 0 &&
+                <>
+                    <Pokemon>
+                        <Img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`} alt={post.name} />
 
-            <Details>
-                <Types><Span>Type(s):</Span> {post.types}.</Types>
+                        <h1>{post.name}</h1>
+                    </Pokemon>
 
-                <H3>Move(s) :</H3>
-                <p>{post.moves}.</p>
+                    <Details>
+                        <Types><Span>Type(s):</Span> {post.types}.</Types>
 
-                <H3>Ability(ies) :</H3>
-                {
-                    post.abilities.map((e, index) => {
-                        return (
-                            <Ability key={index}>
-                                <p><Span>Name: </Span>{e.name}</p>
+                        <H3>Move(s) :</H3>
+                        <p>{post.moves}.</p>
 
-                                <p><Span>Description: </Span>{e.description}</p>
-                            </Ability>
-                        )
-                    })
-                }
-            </Details>
-            <Link to={'/quest-react-avancado'}>
-                  <ButtonDefault label='Return' />
-            </Link>
+                        <H3>Ability(ies) :</H3>
+                        {
+                            post.abilities.map((e, index) => {
+                                return (
+                                    <Ability key={index}>
+                                        <p><Span>Name: </Span>{e.name}</p>
+
+                                        <p><Span>Description: </Span>{e.description}</p>
+                                    </Ability>
+                                )
+                            })
+                        }
+                    </Details>
+                    
+                    <Link to={'/quest-react-avancado'}>
+                        <ButtonDefault label='Return' />
+                    </Link>
+                </>
+            }
         </Div>
     )
 }
