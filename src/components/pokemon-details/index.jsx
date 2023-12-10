@@ -7,8 +7,8 @@ import styled from 'styled-components';
 
 const PokemonDetails = () => {
     const [post, setPost] = useState({
-        types: [],
         name: [],
+        types: [],
         moves: [],
         abilities: []
     })
@@ -53,7 +53,7 @@ const PokemonDetails = () => {
                             <Ability key={index}>
                                 <p><Span>Name: </Span>{e.name}</p>
 
-                                <p><Span>Description: </Span>{e.discription}</p>
+                                <p><Span>Description: </Span>{e.description}</p>
                             </Ability>
                         )
                     })

@@ -6,29 +6,27 @@ import { ButtonDefault } from '../button';
 import React, { useContext } from "react"
 import { ThemeContext } from '../../contexts/theme-context';
 
-
 const PokemonsList = () => {
-    const [lists, setLists] = useState({ pokemons: [] })
+    const [list, setList] = useState({ pokemons: [] })
     const [count, setCount] = useState(10);
 
     useEffect(() => {
         async function fetchData() {
             const data = await getPokemons()
-            setLists({ pokemons: data })
+            setList({ pokemons: data })
         }
         fetchData()
     }, [])
 
-    const {theme} = useContext(ThemeContext)
-
+    const { theme } = useContext(ThemeContext)
     return (
         <>
             <Ul>
                 {
-                    lists.pokemons.map((pokemon, index) => {
-                        if (lists.type !== undefined && pokemon.type.includes(lists.type)) return pokemonCard()
+                    list.pokemons.map((pokemon, index) => {
+                        if (list.typeSelected !== undefined && pokemon.type.includes(list.typeSelected)) return pokemonCard()
 
-                        if ((lists.type === undefined || lists.type === "") && index < count) return pokemonCard()
+                        if ((list.typeSelected === undefined || list.typeSelected === "") && index < count) return pokemonCard()
 
                         function pokemonCard() {
                             return <Li key={index}>
@@ -49,11 +47,11 @@ const PokemonsList = () => {
                 <p>or</p>
 
                 <form onSubmit={(e) => {
-                                        e.preventDefault();
+                    e.preventDefault();
 
-                                        setLists({ ...lists, type: typeOption.value });
-                               }}>
-                                
+                    setList({ ...list, typeSelected: typeOption.value });
+                }}>
+
                     <Label htmlFor="typeOption">Select pokemon's types:</Label>
                     <Select id='typeOption' theme={theme}>
 
