@@ -143,14 +143,14 @@ ul {
     width: 100%;
 }
 `,Bv="/quest-react-avancado/assets/Loading-qNBHaW3I.gif",Kd=()=>v.jsxs(Wv,{children:[v.jsx(Vv,{src:Bv,alt:"Loading Gif"}),v.jsx("h1",{children:"Loading..."})]}),Wv=F.div`
-    background-color: hsla(0, 1%, 57%, 0.8);
+    background-color: hsla(0, 1%, 57%, .1);
     padding: 25px;
     text-align: center;
     border-radius: 25px;
     margin-top: 50px;
 `,Vv=F.img`
     margin-bottom: 20px;
-`,Hv=()=>{const[e,t]=_.useState({pokemons:[]}),[n,r]=_.useState(10);_.useEffect(()=>{async function o(){const i=await Dv();t({pokemons:i})}o()},[]);const{theme:l}=_.useContext(dn);return v.jsxs(v.Fragment,{children:[e.pokemons.length===0&&v.jsx(Kd,{}),e.pokemons.length!==0&&v.jsxs(v.Fragment,{children:[v.jsx(Qv,{children:e.pokemons.map((o,i)=>{if(e.typeSelected!==void 0&&o.type.includes(e.typeSelected)||(e.typeSelected===void 0||e.typeSelected==="")&&i<n)return u();function u(){return v.jsx(Gv,{children:v.jsxs(Qd,{to:`/${o.id}`,state:o,children:[v.jsx(Kv,{src:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${o.id}.gif`,alt:`${o.name} gif.`}),v.jsx("p",{children:o.name})]})},i)}})}),v.jsxs(Yv,{children:[(e.typeSelected===void 0||e.typeSelected==="")&&v.jsxs(v.Fragment,{children:[v.jsx(Gd,{label:"Load more",onclick:()=>{r(o=>o+10)}}),v.jsx("p",{children:"or"})]}),v.jsxs("form",{onSubmit:o=>{o.preventDefault(),t({...e,typeSelected:typeOption.value})},children:[v.jsx(Xv,{htmlFor:"typeOption",children:"Select pokemon's types:"}),v.jsxs(Jv,{id:"typeOption",theme:l,children:[v.jsx("option",{value:"",children:"All types"}),v.jsx("option",{value:"normal",children:"Normal"}),v.jsx("option",{value:"fighting",children:"Fighting"}),v.jsx("option",{value:"flying",children:"Flying"}),v.jsx("option",{value:"poison",children:"Poison"}),v.jsx("option",{value:"ground",children:"Ground"}),v.jsx("option",{value:"rock",children:"Rock"}),v.jsx("option",{value:"bug",children:"Bug"}),v.jsx("option",{value:"ghost",children:"Ghost"}),v.jsx("option",{value:"fire",children:"Fire"}),v.jsx("option",{value:"water",children:"Water"}),v.jsx("option",{value:"grass",children:"Grass"}),v.jsx("option",{value:"electric",children:"Electric"}),v.jsx("option",{value:"psychic",children:"Psychic"}),v.jsx("option",{value:"ice",children:"Ice"}),v.jsx("option",{value:"dragon",children:"Dragon"})]}),v.jsx(Zv,{theme:l,type:"submit",children:"submit"})]})]})]})]})},Qv=F.ul`
+`,Hv=()=>{const[e,t]=_.useState({pokemons:[]}),[n,r]=_.useState(10);_.useEffect(()=>{async function o(){const i=await Dv();t({pokemons:i})}o()},[]);const{theme:l}=_.useContext(dn);return v.jsxs(v.Fragment,{children:[e.pokemons.length===0&&v.jsx(Kd,{}),e.pokemons.length!==0&&v.jsxs(v.Fragment,{children:[v.jsx(Qv,{children:e.pokemons.map((o,i)=>{if(e.typeSelected!==void 0&&o.type.includes(e.typeSelected)||(e.typeSelected===void 0||e.typeSelected==="")&&i<n)return u();function u(){return v.jsx(Gv,{children:v.jsxs(Qd,{to:`/${o.id}`,state:o,children:[v.jsx(Kv,{src:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${o.id}.gif`,alt:`${o.name} gif.`}),v.jsx("p",{children:o.name})]})},i)}})}),v.jsxs(Yv,{children:[(e.typeSelected===void 0||e.typeSelected==="")&&v.jsxs(v.Fragment,{children:[v.jsx(Gd,{label:"Load more",onclick:()=>{r(o=>o+10)}}),v.jsx("p",{children:"or"})]}),v.jsxs("form",{onSubmit:o=>{o.preventDefault(),t({...e,typeSelected:typeOption.value})},children:[v.jsx(Xv,{htmlFor:"typeOption",children:"Search Pokemon by Type:"}),v.jsxs(Jv,{id:"typeOption",theme:l,children:[v.jsx("option",{value:"",children:"All types"}),v.jsx("option",{value:"normal",children:"Normal"}),v.jsx("option",{value:"fighting",children:"Fighting"}),v.jsx("option",{value:"flying",children:"Flying"}),v.jsx("option",{value:"poison",children:"Poison"}),v.jsx("option",{value:"ground",children:"Ground"}),v.jsx("option",{value:"rock",children:"Rock"}),v.jsx("option",{value:"bug",children:"Bug"}),v.jsx("option",{value:"ghost",children:"Ghost"}),v.jsx("option",{value:"fire",children:"Fire"}),v.jsx("option",{value:"water",children:"Water"}),v.jsx("option",{value:"grass",children:"Grass"}),v.jsx("option",{value:"electric",children:"Electric"}),v.jsx("option",{value:"psychic",children:"Psychic"}),v.jsx("option",{value:"ice",children:"Ice"}),v.jsx("option",{value:"dragon",children:"Dragon"})]}),v.jsx(Zv,{theme:l,type:"submit",children:"submit"})]})]})]})]})},Qv=F.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -205,7 +205,7 @@ p {
     font-size: 20px;
     margin: 20px auto 5px;
     font-weight: 900;
-    width: 252px;
+    width: 258px;
 `,Jv=F.select`
     width: 260px;
     height: 50px;
@@ -235,7 +235,7 @@ p {
     cursor: pointer;
     background-color: ${e=>e.theme.primary};
     color: ${e=>e.theme.secondary};
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 
     &:hover {
@@ -366,17 +366,17 @@ p {
     }
     
     &:after {
-    content: '';
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    background: url(${hg}) no-repeat center;
-    background-size: cover;
-    background-color: #222;
-    border-radius: 100px;
-    top: 2.4px;
-    left: 3px;
-    transition: 0.5s;
+        content: '';
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background: url(${hg}) no-repeat center;
+        background-size: cover;
+        background-color: #222;
+        border-radius: 100px;
+        top: 2.4px;
+        left: 3px;
+        transition: 0.5s;
     }
 
     @media (max-width: 768px) {
@@ -400,11 +400,11 @@ p {
     }
 
     &:checked ~ label:after{
-    left: 46px;
-    transform: rotate(180deg);
-    background: url(${pg}) no-repeat center;
-    background-size: cover;
-    background-color: #fff;
+        left: 46px;
+        transform: rotate(180deg);
+        background: url(${pg}) no-repeat center;
+        background-size: cover;
+        background-color: #fff;
     }
 
     @media (max-width: 768px) {
