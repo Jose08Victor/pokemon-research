@@ -59,8 +59,7 @@ const PokemonsList = () => {
 
                             setList({ ...list, typeSelected: typeOption.value });
                         }}>
-
-                            <Label htmlFor="typeOption">Select pokemon's types:</Label>
+                            <Label htmlFor="typeOption">Search Pokemon by Type:</Label>
                             <Select id='typeOption' theme={theme}>
 
                                 <option value="">All types</option>
@@ -154,7 +153,7 @@ const Label = styled.label`
     font-size: 20px;
     margin: 20px auto 5px;
     font-weight: 900;
-    width: 252px;
+    width: 258px;
 `
 
 const Select = styled.select`
@@ -188,7 +187,7 @@ const Button = styled.button`
     cursor: pointer;
     background-color: ${props => props.theme.primary};
     color: ${props => props.theme.secondary};
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 
     &:hover {

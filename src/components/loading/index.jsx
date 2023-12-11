@@ -11,7 +11,7 @@ const Loading = () => {
 }
 
 const Div = styled.div`
-    background-color: hsla(0, 1%, 57%, 0.8);
+    background-color: hsla(0, 1%, 57%, .1);
     padding: 25px;
     text-align: center;
     border-radius: 25px;
