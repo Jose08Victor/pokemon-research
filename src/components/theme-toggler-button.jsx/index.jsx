@@ -38,17 +38,17 @@ const Label = styled.label`
     }
     
     &:after {
-    content: '';
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    background: url(${whitePokeball}) no-repeat center;
-    background-size: cover;
-    background-color: #222;
-    border-radius: 100px;
-    top: 2.4px;
-    left: 3px;
-    transition: 0.5s;
+        content: '';
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background: url(${whitePokeball}) no-repeat center;
+        background-size: cover;
+        background-color: #222;
+        border-radius: 100px;
+        top: 2.4px;
+        left: 3px;
+        transition: 0.5s;
     }
 
     @media (max-width: 768px) {
@@ -74,11 +74,11 @@ const Input = styled.input`
     }
 
     &:checked ~ label:after{
-    left: 46px;
-    transform: rotate(180deg);
-    background: url(${blackPokeball}) no-repeat center;
-    background-size: cover;
-    background-color: #fff;
+        left: 46px;
+        transform: rotate(180deg);
+        background: url(${blackPokeball}) no-repeat center;
+        background-size: cover;
+        background-color: #fff;
     }
 
     @media (max-width: 768px) {
