@@ -1,6 +1,6 @@
 <h1 align="center">Pokemon Reseach</h1>
 
-<a href="#white_pokeball-funcionalidades-e-demonstração-da-aplicação">testando</a>
+<a href="#teste">testando</a>
 
 <div align="center">
         <img src="./src/assets/white-logo.svg" width="500" alt="Pokemon Logo">
@@ -26,15 +26,15 @@
 
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Funcionalidades e Demonstração da Aplicação
 
-- **`Funcionalidade 1`**: Na página inicial temos uma lista de 10 pokemons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokemons.![Pokemon_Home](gifs/pokemonHome.gif)
+- **`Funcionalidade 1`**: Na página inicial temos uma lista de 10 pokemons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokemons:![Pokemon_Home](gifs/pokemonHome.gif)
 
-    - **`Funcionalidade 1a`**: Abaixo do botão "Load More" temos uma outra opção para o usuario escolher que é mostrar uma lista de pokemons pelo o tipo.
+    - **`Funcionalidade 1a`**: Abaixo do botão "Load More" temos uma outra opção para o usuario escolher que é mostrar uma lista de pokemons pelo o tipo:
 
-- **`Funcionalidade 2`**: Acima no canto esquerdo temos um botão para alternarmos o tema do projeto para claro ou escuro. 
+- **`Funcionalidade 2`**: Acima no canto esquerdo temos um botão para alternarmos o tema do projeto para claro ou escuro: 
 
-- **`Funcionalidade 3`**: Ao clicarmos em um pokemon abrimos uma pagina que mostra o pokemon e as suas caracteristicas como o nome, tipo, movimentos e abilidades com descrição que esse pokemon possui.
+- **`Funcionalidade 3`**: Ao clicarmos em um pokemon abrimos uma pagina que mostra o pokemon e as suas caracteristicas como o nome, tipo, movimentos e abilidades com descrição que esse pokemon possui:
 
-    - **`Funcionalidade 3a`**: E logo abaixo temos o botão com o nome "Return" para retornamos a pagina principal.
+    - **`Funcionalidade 3a`**: E logo abaixo temos o botão com o nome "Return" para retornamos a pagina principal:
 
 
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Ferramentas e Técnicas utilizadas
