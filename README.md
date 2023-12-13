@@ -1,6 +1,6 @@
 <h1 align="center">Pokemon Reseach</h1>
 
-<a href="#teste">testando</a>
+- **_<a href="#teste">testando</a>_**
 
 <div align="center">
         <img src="./src/assets/white-logo.svg" width="500" alt="Pokemon Logo">
@@ -53,4 +53,4 @@
 
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Abrir e rodar o projeto
 
-<p id="teste">testando o link</p>
+<h2 id="teste"><img src="./src/assets/white-pokeball.svg" alt="Pokemon Logo"> Descrição do projeto</h2>
