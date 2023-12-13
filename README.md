@@ -1,5 +1,7 @@
 <h1 align="center">Pokemon Reseach</h1>
 
+<a href="#white_pokeball-funcionalidades-e-demonstração-da-aplicação">testando</a>
+
 <div align="center">
         <img src="./src/assets/white-logo.svg" width="500" alt="Pokemon Logo">
 </div>
@@ -24,7 +26,7 @@
 
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Funcionalidades e Demonstração da Aplicação
 
-- **`Funcionalidade 1`**: Na página inicial temos uma lista de 10 pokemons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokemons.
+- **`Funcionalidade 1`**: Na página inicial temos uma lista de 10 pokemons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokemons.![Pokemon_Home](gifs/pokemonHome.gif)
 
     - **`Funcionalidade 1a`**: Abaixo do botão "Load More" temos uma outra opção para o usuario escolher que é mostrar uma lista de pokemons pelo o tipo.
 
@@ -50,3 +52,5 @@
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Acesso ao projeto
 
 ## ![White_Pokeball](./src/assets/white-pokeball.svg) Abrir e rodar o projeto
+
+<p id="teste">testando o link</p>
