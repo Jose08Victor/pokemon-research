@@ -6,7 +6,7 @@
 
 ### ![White_Pokeball](./src/assets/white-pokeball.svg) Tópicos:
 
-- [**_Descrição do projeto_**](#white_pokeball-descrição-do-projeto)
+- [**_Descrição do projeto_**](#white-pokeball-descrição-do-projeto)
 
 - [**_Funcionalidades e Demonstração da Aplicação_**](#white_pokeball-funcionalidades-e-demonstração-da-aplicação)
 
@@ -16,7 +16,7 @@
 
 - [**_Abrir e rodar o projeto_**](#white_pokeball-abrir-e-rodar-o-projeto)
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Descrição do projeto
+## ![White-Pokeball](./src/assets/white-pokeball.svg) Descrição do projeto
 
 <p>Este projeto serve para pesquisar sobre os pokemons da 1º Geração no intuito de saber as caracteristicas e curiosidades do pokemon que o usuario estar procurando.</p>
 
