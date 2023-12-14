@@ -1,56 +1,58 @@
-<h1 align="center">Pokemon Reseach</h1>
+<h1><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Pokemon Reseach</h1>
 
-- **_<a href="#teste">testando</a>_**
-
-<div align="center">
+<div align="center" >
         <img src="./src/assets/white-logo.svg" width="500" alt="Pokemon Logo">
 </div>
 
 ### ![White_Pokeball](./src/assets/white-pokeball.svg) Tópicos:
 
-- [**_Descrição do projeto_**](#descrição-do-projeto)
+- **_<a href="#descrição-do-projeto">Descrição do projeto</a>_**
 
-- [**_Funcionalidades e Demonstração da Aplicação_**](#white_pokeball-funcionalidades-e-demonstração-da-aplicação)
+- **_<a href="#funcionalidades-e-demonstrações-da-aplicação">Funcionalidades e Demonstrações da Aplicação</a>_**
 
-- [**_Ferramentas e Técnicas utilizadas_**](#white_pokeball-ferramentas-e-técnicas-utilizadas)
+- **_<a href="#ferramentas-e-técnicas-utilizadas">Ferramentas e Técnicas utilizadas</a>_**
 
-- [**_Acesso ao projeto_**](#white_pokeball-acesso-ao-projeto)
+- **_<a href="#acesso-ao-projeto">Acesso ao projeto</a>_**
 
-- [**_Abrir e rodar o projeto_**](#white_pokeball-abrir-e-rodar-o-projeto)
+- **_<a href="#abrir-e-rodar-o-projeto">Abrir e rodar o projeto</a>_**
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Descrição do projeto
+<h2 id="descrição-do-projeto"><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Descrição do projeto</h2>
 
-<p>Este projeto serve para pesquisar sobre os pokemons da 1º Geração no intuito de saber as caracteristicas e curiosidades do pokemon que o usuario estar procurando.</p>
+<p>Este projeto tem como objeto mostrar uma lista de pokémons da 1º Geração no intuito de saber as características e curiosidades do pokémon que o usuário estar procurando.</p>
 
-<p>A pesquisa proporciona informações como o gif do pokemon, as caracteristicas como o nome, tipo, os movimentos e habilidades com descrição do pokemon selecionado.</p>
+<p>A pesquisa proporciona informações como o GIF do Pokémon, as características como o nome, tipo, os movimentos e habilidades com descrição do pokémon selecionado.</p> 
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Funcionalidades e Demonstração da Aplicação
+<h2 id="funcionalidades-e-demonstrações-da-aplicação"><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Funcionalidades e Demonstrações da Aplicação</h2>
 
-- **`Funcionalidade 1`**: Na página inicial temos uma lista de 10 pokemons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokemons:![Pokemon_Home](gifs/pokemonHome.gif)
+- **`Funcionalidade_1`**: Na página inicial temos uma lista de 10 Pokémons e logo abaixo contem um botão "Load More" para mostrar mais opções de pokémons:![Pokemon_Home](project-gifs/pokemonHome.gif)
 
-    - **`Funcionalidade 1a`**: Abaixo do botão "Load More" temos uma outra opção para o usuario escolher que é mostrar uma lista de pokemons pelo o tipo:
+    - **`Funcionalidade_1a`**: Abaixo do botão "Load More", há outra opção para o usuário escolher, que é mostrar uma lista de pokémons de acordo com o tipo:![Pokemon_Home](project-gifs/pokemonTypes.gif)
 
-- **`Funcionalidade 2`**: Acima no canto esquerdo temos um botão para alternarmos o tema do projeto para claro ou escuro: 
+- **`Funcionalidade_2`**: Acima no canto esquerdo temos um botão para alternarmos o tema do projeto para claro ou escuro:
+    - Modo Claro: <div align="center" >
+        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450">
+        </div>
 
-- **`Funcionalidade 3`**: Ao clicarmos em um pokemon abrimos uma pagina que mostra o pokemon e as suas caracteristicas como o nome, tipo, movimentos e abilidades com descrição que esse pokemon possui:
+    - Modo Escuro: <div align="center" >
+        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450">
+        </div>
 
-    - **`Funcionalidade 3a`**: E logo abaixo temos o botão com o nome "Return" para retornamos a pagina principal:
+- **`Funcionalidade_3`**: Ao clicarmos em um pokémon abrimos uma página que mostra o pokémon e as suas características como o nome, tipo, movimentos e habilidades com descrição que esse pokémon possui:![Pokemon_Home](project-gifs/pokemonDetails.gif)
 
+    - **`Funcionalidade_3a`**: E por último, há um botão que tem o nome "Return" para podermos retornar à página principal:![Pokemon_Home](project-gifs/pokemonReturn.gif)
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Ferramentas e Técnicas utilizadas
+<h2 id="ferramentas-e-técnicas-utilizadas"><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Ferramentas e Técnicas utilizadas</h2>
 
-1º este projeto foi construido com o React para que podesse utilizar o conceito de Single Page Applications (SPA), que é criar um site com Aplicações de Página Única.
+- Este projeto foi construído com o React para que pudesse utilizar o conceito de Single Page Applications (SPA), que é criar um site com Aplicações de Página Única.
 
-2º para buscar as informações dos pokemons foi preciso utilizar esta API: [*pokeapi.co*](https://pokeapi.co/).
+- Para buscar as informações dos pokémons foi preciso utilizar esta API: [*pokeapi.co*](https://pokeapi.co/).
 
-3º utilizei o react-router-dom para navegar entre as páginas.
+- Utilizei o react-router-dom para navegar entre as páginas.
 
-4º tambem foi utilizado o Context API para criar o Theme Toggler que serve para alternarmos o tema para claro ou escuro.
+- Também foi utilizado o Context API para criar o Theme Toggler que serve para alternarmos o tema para claro ou escuro.
 
-5º O projeto foi totalmente estilizado com o styled-components, que serviu para deixar o site bonito, responsivo (utilizando o media query) e com um background animado (utilizando a propriedade animation).
+- O projeto foi totalmente estilizado com o styled-components, que serviu para deixar o site bonito, responsivo (utilizando o media query) e com um background animado (utilizando a propriedade animation).
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Acesso ao projeto
+<h2 id="acesso-ao-projeto"><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Acesso ao projeto</h2>
 
-## ![White_Pokeball](./src/assets/white-pokeball.svg) Abrir e rodar o projeto
-
-<h2 id="teste"><img src="./src/assets/white-pokeball.svg" alt="Pokemon Logo"> Descrição do projeto</h2>
+<h2 id="abrir-e-rodar-o-projeto"><img src="./src/assets/white-pokeball.svg" alt="White Pokeball"> Abrir e rodar o projeto</h2>
