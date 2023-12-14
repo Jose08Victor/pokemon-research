@@ -30,11 +30,11 @@
 
 - **`Funcionalidade_2`**: Acima no canto esquerdo temos um botão para alternarmos o tema do projeto para claro ou escuro:
     - Modo Claro: <div align="center" >
-        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450">
+        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="400"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="400">
         </div>
 
     - Modo Escuro: <div align="center" >
-        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="450">
+        <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="400"> <img src="project-gifs/pokemonLightTheme.gif" alt="Pokemon Logo" height="400">
         </div>
 
 - **`Funcionalidade_3`**: Ao clicarmos em um pokémon abrimos uma página que mostra o pokémon e as suas características como o nome, tipo, movimentos e habilidades com descrição que esse pokémon possui:![Pokemon_Home](project-gifs/pokemonDetails.gif)
