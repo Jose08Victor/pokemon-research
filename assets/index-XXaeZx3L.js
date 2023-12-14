@@ -130,7 +130,7 @@ ul {
     cursor: pointer;
     font-size: 16px;
     background-color: ${e=>e.theme.primary};
-    color: ${e=>e.theme.secondary}; 
+    color: ${e=>e.theme.secondary};
     
 &:hover {
     background-color: transparent;
