@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { getFirstGenerationPokemons } from '../../services/pokemonResource';
 import { Link } from 'react-router-dom';
-import { ButtonDefault } from '../button';
+import { DefaultButton } from '../default-button';
 import React, { useContext } from "react"
 import { ThemeContext } from '../../contexts/theme-context';
 import { Loading } from '../loading';
@@ -49,7 +49,7 @@ const PokemonsList = () => {
                     <Div>
                         {(list.typeSelected === undefined || list.typeSelected === "") &&
                             <>
-                                <ButtonDefault label='Load more' onclick={() => { setCount((c) => c + 10) }} />
+                                <DefaultButton label='Load more' onclick={() => { setCount((c) => c + 10) }} />
                                 <p>or</p>
                             </>
                         }

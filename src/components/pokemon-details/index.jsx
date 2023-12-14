@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import { getMoves, getAbilities } from '../../services/pokemonResource';
-import { ButtonDefault } from '../button';
+import { DefaultButton } from '../default-button';
 import pokeball from '/pokeball.png'
 import styled from 'styled-components';
 import { Loading } from '../loading';
@@ -66,7 +66,7 @@ const PokemonDetails = () => {
                     </Details>
                     
                     <Link to={'/quest-react-avancado'}>
-                        <ButtonDefault label='Return' />
+                        <DefaultButton label='Return' />
                     </Link>
                 </>
             }
