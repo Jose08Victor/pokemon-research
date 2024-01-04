@@ -16,7 +16,7 @@ const AppRoutes = () => {
 
     <BrowserRouter>
       <Routes>
-        <Route exact path='/quest-react-avancado' element={<Home />} />
+        <Route exact path='/pokemon-research' element={<Home />} />
         <Route exact path='/:id' element={<Descripition />} />
       </Routes>
     </BrowserRouter>

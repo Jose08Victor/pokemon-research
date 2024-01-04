@@ -65,7 +65,7 @@ const PokemonDetails = () => {
                         }
                     </Details>
                     
-                    <Link to={'/quest-react-avancado'}>
+                    <Link to={'/pokemon-research'}>
                         <DefaultButton label='Return' />
                     </Link>
                 </>
